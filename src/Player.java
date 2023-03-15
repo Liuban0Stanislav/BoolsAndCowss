@@ -14,7 +14,8 @@ public class Player {
         return payerArr;
     }
 
-    public void setPayerArr(int[] payerArr) {
+    public int[] setPayerArr(int[] payerArr) {
         this.payerArr = payerArr;
+        return payerArr;
     }
 }
