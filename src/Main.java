@@ -10,13 +10,15 @@ public class Main {
         /**
          * игроки загадывают число
          */
-        paMan.setPlayerNumber(5896);
+        paMan.setPlayerNumber(9361);
         paPC.setPlayerNumber();
 
         System.out.println(paMan.getPlayerNumber());
-        System.out.println(paPC.getPlayerNumber());
-
         System.out.println(Arrays.toString(paMan.numToArr(paMan.getPlayerNumber())));
+
+        System.out.println(paPC.getPlayerNumber());
         System.out.println(Arrays.toString(paPC.numToArr(paPC.getPlayerNumber())));
+
+        System.out.println("paMan.isNumbersUniq(paMan.getPlayerArray()) = " + paMan.isNumbersUniq(paMan.getPlayerArray()));
     }
 }

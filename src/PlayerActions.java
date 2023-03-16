@@ -3,9 +3,16 @@ import java.util.Random;
 public class PlayerActions {
     Player player = new Player();
 
-    public static int randomNum(int limit) {
-        Random rand = new Random();
-        return rand.nextInt(limit);
+
+    boolean isNumbersUniq(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length && i != j; j++) {
+                if (arr[i] == arr[j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public int[] numToArr(int num) {
@@ -14,6 +21,7 @@ public class PlayerActions {
         arr[1] = num / 100 % 10;
         arr[2] = num / 10 % 10;
         arr[3] = num % 10;
+
         return player.setPayerArr(arr);
     }
 
@@ -30,5 +38,14 @@ public class PlayerActions {
 
     public int getPlayerNumber() {
         return player.getPlayerNum();
+    }
+
+    public int[] getPlayerArray() {
+        return player.getPayerArr();
+    }
+
+    public static int randomNum(int limit) {
+        Random rand = new Random();
+        return rand.nextInt(limit);
     }
 }
